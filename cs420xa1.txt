@@ -1,0 +1,44 @@
+IMGD/CS420x Graphical Simulations Assignment 1
+Geoffrey Garsson
+Run this using "The Force": https://shawnlawson.github.io/The_Force/
+Youtube demo: https://youtu.be/kFGbLbiIZ1A
+
+void main() {
+  vec2 p = uvN();
+  
+  vec4 lastFrame = texture2D( backbuffer, p );
+  float c = circle( sin(time), cos(time), .5, 0.025 );
+  float c6 = noise(circle(cos(time), sin(time), .5, 0.025));
+  
+  float c2 = circle(sin(time) * .5, cos(time + 1.0) * .5, .2, .025);
+  float c3 = circle(sin(time + 1.0) * .5, cos(time + 1.0) * .5, .2, .025);
+  float c4 = circle(sin(time) * .5, cos(time) * .5, .2, .025);
+  float c5 = circle(sin(time - 1.0) * .5, cos(time) *.5, .2, .025);
+
+  float scsm = 0.5;
+  
+  vec4 cCol = vec4(noise(sin(time)), noise(cos(time)), noise(tan(time)), 1.0);
+  cCol *= c;
+  vec4 c6col = vec4(noise(cos(time)), noise(sin(time)), noise(tan(time)), 1.0);
+  c6col *= c6;
+  
+  vec4 c2col = vec4(sin((time + .5) * scsm), .5, cos((time + .5) * scsm), 1.0);
+  c2col *= c2;
+  vec4 c3col = vec4(sin((time + 1.) * scsm), .5, cos((time + 1.) * scsm), 1.0);
+  c3col *= c3;
+  vec4 c4col = vec4(sin((time - 1.5) * scsm), .5, cos((time - 1.5) * scsm), 1.0);
+  c4col *= c4;
+  vec4 c5col = vec4(sin((time - 2.) * scsm), .5, cos((time - 2.) * scsm), 1.0);
+  c5col *= c5;
+  
+  vec4 feedback = cCol + c6col + c2col + c3col + c4col + c5col + lastFrame * .925;
+ 
+  
+  vec3 s = sexy();
+  
+  vec4 sCol = vec4(noise(sin(time)) * s.x, noise(cos(time)) * s.y, noise(tan(time)) * s.z, 1.0);
+  sCol *= noise(abs(cos(time)));
+
+ 
+  gl_FragColor = feedback + sCol;
+}
