@@ -1,7 +1,8 @@
 IMGD/CS420x Graphical Simulations Assignment 1
 Geoffrey Garsson
 Run this using "The Force": https://shawnlawson.github.io/The_Force/
-Youtube demo: https://youtu.be/kFGbLbiIZ1A
+Youtube demo (short): https://youtu.be/kFGbLbiIZ1A
+             (long):  https://youtu.be/cgiuziEH6E8
 
 void main() {
   vec2 p = uvN();
