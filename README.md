@@ -1,8 +1,10 @@
 # CS420X-Garsson
 My work for CS/IMGD420X.
 
-
-Geoffrey Garsson
+Geoffrey Garsson <br>
 Assignment 2: [Project](https://gdgarsson.github.io),
 	      [Repository](https://github.com/gdgarsson/gdgarsson.github.io), 
-              [Explanation](https://github.com/gdgarsson/gdgarsson.github.io/blob/main/explanation.txt)
+              [Explanation](https://github.com/gdgarsson/gdgarsson.github.io/blob/main/explanation.txt) <br>
+Assignment 3: [Project](https://gdgarsson.github.io/A3.html),
+	      [Repository](https://github.com/gdgarsson/gdgarsson.github.io), 
+              [Explanation](https://github.com/gdgarsson/gdgarsson.github.io/blob/main/explanation_a3.txt)
